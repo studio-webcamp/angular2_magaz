@@ -32,11 +32,11 @@
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34",
     "@types/node": "^6.0.45",
+    "chai": "^3.5.0",
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
-    "typescript": "^2.0.3"
+    "typescript": "^2.0.3",
+    "typings": "^1.5.0"
   }
 }
-
