@@ -1,0 +1,40 @@
+/**
+ * Created by Ivan on 15.11.2016.
+ */
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require("@angular/core");
+var Magaz_1 = require("../models/Magaz");
+var TshirtlistComponent = (function () {
+    function TshirtlistComponent(magaz) {
+        this.magaz = magaz;
+    }
+    TshirtlistComponent.prototype.ngOnInit = function () {
+        this.getItems();
+    };
+    TshirtlistComponent.prototype.getItems = function () {
+        var _this = this;
+        return this.magaz.getAllItems().then(function (tshirts) {
+            _this.tshirtList = tshirts;
+            return tshirts;
+        });
+    };
+    TshirtlistComponent = __decorate([
+        core_1.Component({
+            selector: 'tshirt-list',
+            templateUrl: './app/components/tshirtlist.component.html'
+        }), 
+        __metadata('design:paramtypes', [Magaz_1.default])
+    ], TshirtlistComponent);
+    return TshirtlistComponent;
+}());
+exports.TshirtlistComponent = TshirtlistComponent;
+//# sourceMappingURL=tshirtlist.component.js.map

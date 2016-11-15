@@ -12,18 +12,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by lenka on 10/29/16.
  */
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Your Magaz';
+var OrderComponent = (function () {
+    function OrderComponent() {
     }
-    AppComponent = __decorate([
+    OrderComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <h1>{{ title }}</h1>\n    <tshirt-list></tshirt-list>\n    <nav>\n        <a [routerLink]=\"['/dashboard']\">Dashboard </a>\n        <a [routerLink]=\"['/order']\">Order </a> \n       \n    </nav>\n    <router-outlet></router-outlet>\n"
+            selector: 'order-app',
+            template: '<h3>My Order</h3>'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], OrderComponent);
+    return OrderComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.OrderComponent = OrderComponent;
+//# sourceMappingURL=order.component.js.map

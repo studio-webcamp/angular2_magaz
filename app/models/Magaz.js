@@ -1,5 +1,6 @@
 "use strict";
 var Order_1 = require("./Order");
+var Tshirt_1 = require("./Tshirt");
 var Fetch_1 = require("./Fetch");
 var Magaz = (function () {
     function Magaz() {
@@ -27,7 +28,9 @@ var Magaz = (function () {
         return this.http.get('/data/tshirts.json').then(function successCallback(response) {
             return response.json();
         }).then(function (json) {
-            console.log(json);
+            return json.map(function (el) {
+                return new Tshirt_1.default(el.sku, el.brand, el.size, el.color, el.price);
+            });
         });
     };
     ;
