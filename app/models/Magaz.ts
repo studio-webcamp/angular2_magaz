@@ -30,7 +30,9 @@ class Magaz {
         return this.http.get('/data/tshirts.json').then(function successCallback(response:Response) {
             return response.json();
         }).then((json)=>{
-            console.log(json);
+            return json.map((t:any) => {
+                return new Tshirt(t.sku, t.brand, <any>Tshirt.Size[t.size], t.color, t.price);
+            });
         });
 
     };

@@ -14,14 +14,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
+var tshirtList_component_1 = require("./components/tshirtList.component");
+var Magaz_1 = require("./models/Magaz");
+var tshirt_component_1 = require("./components/tshirt.component");
+var material_1 = require("@angular/material");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [platform_browser_1.BrowserModule, material_1.MaterialModule.forRoot()],
+            declarations: [app_component_1.AppComponent, tshirtList_component_1.TshirtListComponent, tshirt_component_1.TshirtComponent],
+            bootstrap: [app_component_1.AppComponent],
+            providers: [Magaz_1.default]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

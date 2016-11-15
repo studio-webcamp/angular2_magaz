@@ -8,22 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by lenka on 10/29/16.
- */
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var Tshirt_1 = require("../models/Tshirt");
+var TshirtComponent = (function () {
+    function TshirtComponent() {
     }
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Tshirt_1.default)
+    ], TshirtComponent.prototype, "tshirt", void 0);
+    TshirtComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'my-app',
-            template: '<h1>Tshirts</h1><tshirt-list></tshirt-list>'
+            selector: 'tshirt',
+            templateUrl: 'tshirt.component.html',
+            styleUrls: ['tshirt.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TshirtComponent);
+    return TshirtComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TshirtComponent = TshirtComponent;
+//# sourceMappingURL=tshirt.component.js.map

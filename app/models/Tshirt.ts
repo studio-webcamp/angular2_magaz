@@ -20,5 +20,4 @@ class Tshirt {
         this.price = price;
     }
 }
-
 export default Tshirt;
