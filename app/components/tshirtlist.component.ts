@@ -1,22 +1,23 @@
-/**
- * Created by Ivan on 15.11.2016.
- */
-
 import {Component, OnInit} from "@angular/core";
 import Magaz from "../models/Magaz";
 import Tshirt from "../models/Tshirt";
 @Component({
+    moduleId: module.id,
     selector: 'tshirt-list',
-    templateUrl: './app/components/tshirtlist.component.html'
+    templateUrl: 'tshirtList.component.html',
+    styleUrls:['tshirtList.component.css']
 })
-export class TshirtlistComponent implements OnInit{
-    private tshirtList: Tshirt;
-    ngOnInit(): void {
+export class TshirtListComponent implements OnInit {
+    private tshirtList:Tshirt[];
+
+    ngOnInit():void {
         this.getItems();
     }
-    constructor(private magaz: Magaz) {
+
+    constructor(private magaz:Magaz) {
     }
-    getItems(){
+
+    getItems() {
         return this.magaz.getAllItems().then((tshirts)=> {
             this.tshirtList = tshirts;
             return tshirts;

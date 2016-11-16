@@ -17,14 +17,17 @@ var app_component_1 = require('./app.component');
 var order_component_1 = require("./order.component");
 var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./dashboard.component");
-var tshirtlist_component_1 = require("./components/tshirtlist.component");
+var tshirtList_component_1 = require("./components/tshirtList.component");
 var Magaz_1 = require("./models/Magaz");
+var material_1 = require("@angular/material");
+var tshirt_component_1 = require("./components/tshirt.component");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
+                material_1.MaterialModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     {
                         path: 'order',
@@ -38,7 +41,8 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                tshirtlist_component_1.TshirtlistComponent,
+                tshirt_component_1.TshirtComponent,
+                tshirtList_component_1.TshirtListComponent,
                 order_component_1.OrderComponent,
                 dashboard_component_1.DashboardComponent
             ],

@@ -7,11 +7,15 @@ import {AppComponent}   from './app.component';
 import {OrderComponent} from "./order.component";
 import {RouterModule} from "@angular/router";
 import {DashboardComponent} from "./dashboard.component";
-import {TshirtlistComponent} from "./components/tshirtlist.component";
+import {TshirtListComponent} from "./components/tshirtList.component";
 import Magaz from "./models/Magaz";
+import {MaterialModule} from "@angular/material";
+import {TshirtComponent} from "./components/tshirt.component";
+
 
 @NgModule({
     imports: [BrowserModule,
+        MaterialModule.forRoot(),
         RouterModule.forRoot([
             {
                 path: 'order',
@@ -25,7 +29,8 @@ import Magaz from "./models/Magaz";
     ],
     declarations: [
         AppComponent,
-        TshirtlistComponent,
+        TshirtComponent,
+        TshirtListComponent,
         OrderComponent,
         DashboardComponent
     ],
