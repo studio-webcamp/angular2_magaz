@@ -16,27 +16,31 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var order_component_1 = require("./order.component");
 var router_1 = require("@angular/router");
-var tshirtlist_component_1 = require('./components/tshirtlist.component');
-var Magaz_1 = require('./models/Magaz');
-/*import {MaterialModule} from '@angular/material';*/
+var dashboard_component_1 = require("./dashboard.component");
+var tshirtlist_component_1 = require("./components/tshirtlist.component");
+var Magaz_1 = require("./models/Magaz");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
-                /*MaterialModule.forRoot(),*/
                 router_1.RouterModule.forRoot([
                     {
                         path: 'order',
                         component: order_component_1.OrderComponent
                     },
+                    {
+                        path: 'dashboard',
+                        component: dashboard_component_1.DashboardComponent
+                    }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
                 tshirtlist_component_1.TshirtlistComponent,
                 order_component_1.OrderComponent,
+                dashboard_component_1.DashboardComponent
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [Magaz_1.default]
