@@ -20,7 +20,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashboard',
-            templateUrl: "dashboard.component.html"
+            templateUrl: "./components/dashboard.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -8,11 +8,11 @@ import {OrderComponent} from "./order.component";
 import {RouterModule} from "@angular/router";
 import {TshirtlistComponent} from './components/tshirtlist.component';
 import Magaz from './models/Magaz';
-import {MaterialModule} from '@angular/material';
+/*import {MaterialModule} from '@angular/material';*/
 
 @NgModule({
     imports: [BrowserModule,
-        MaterialModule.forRoot(),
+        /*MaterialModule.forRoot(),*/
         RouterModule.forRoot([
             {
                 path: 'order',

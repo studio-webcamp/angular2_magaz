@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
 @Component({
     moduleId: module.id,
     selector: 'my-dashboard',
-    templateUrl: `dashboard.component.html`
+    templateUrl: `./components/dashboard.component.html`
 })
 export class AppComponent {
     title = 'Your Magaz'

@@ -18,14 +18,14 @@ var order_component_1 = require("./order.component");
 var router_1 = require("@angular/router");
 var tshirtlist_component_1 = require('./components/tshirtlist.component');
 var Magaz_1 = require('./models/Magaz');
-var material_1 = require('@angular/material');
+/*import {MaterialModule} from '@angular/material';*/
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
-                material_1.MaterialModule.forRoot(),
+                /*MaterialModule.forRoot(),*/
                 router_1.RouterModule.forRoot([
                     {
                         path: 'order',
