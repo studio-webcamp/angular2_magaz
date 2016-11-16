@@ -19,6 +19,7 @@ var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./dashboard.component");
 var tshirtlist_component_1 = require("./components/tshirtlist.component");
 var Magaz_1 = require("./models/Magaz");
+var material_1 = require("@angular/material");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ var AppModule = (function () {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
                     }
-                ])
+                ]),
+                material_1.MaterialModule.forRoot()
             ],
             declarations: [
                 app_component_1.AppComponent,

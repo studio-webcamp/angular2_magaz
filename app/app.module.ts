@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import {DashboardComponent} from "./dashboard.component";
 import {TshirtlistComponent} from "./components/tshirtlist.component";
 import Magaz from "./models/Magaz";
+import {MaterialModule} from "@angular/material";
 
 @NgModule({
     imports: [BrowserModule,
@@ -21,7 +22,8 @@ import Magaz from "./models/Magaz";
                 path: 'dashboard',
                 component: DashboardComponent
             }
-        ])
+        ]),
+        MaterialModule.forRoot()
     ],
     declarations: [
         AppComponent,
