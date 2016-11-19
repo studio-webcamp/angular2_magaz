@@ -13,6 +13,10 @@ var Magaz = (function () {
         return this.orders;
     };
     ;
+    Magaz.prototype.getCurrentOrder = function () {
+        return this.orders[0];
+    };
+    ;
     Magaz.prototype.addItemToOrder = function (item) {
         if (!this.orders.length) {
             this.addOrder(new Order_1.default());

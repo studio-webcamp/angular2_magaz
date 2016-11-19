@@ -1,0 +1,24 @@
+<table layout-fill>
+    <thead>
+    <tr>
+        <th class="md-text-cell">Brand</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Unit price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let order of orders">
+        <tr>
+            <td>order</td>
+        </tr>
+        <tr *ngFor="let item of order.items">
+            <td class="md-text-cell">{{ item.brand }}</td>
+            <td>{{ item.size }}</td>
+            <td>{{ item.color }}</td>
+            <td>{{ item.price }}</td>
+        </tr>
+    </ng-container>
+    </tbody>
+</table>
+<order-form [order]="currentOrder()"></order-form>

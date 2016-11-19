@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, EventEmitter,Input, Output} from "@angular/core";
 import Tshirt from "../models/Tshirt";
 @Component({
     moduleId: module.id,
@@ -9,4 +9,9 @@ import Tshirt from "../models/Tshirt";
 export class TshirtComponent{
     @Input()
     private tshirt: Tshirt;
+    @Output() onOrdered = new EventEmitter<Tshirt>();
+
+    order(){
+        this.onOrdered.emit(this.tshirt);
+    }
 }

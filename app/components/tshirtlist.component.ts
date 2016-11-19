@@ -23,4 +23,8 @@ export class TshirtListComponent implements OnInit {
             return tshirts;
         });
     }
+
+    addItemToOrder(item:Tshirt){
+        this.magaz.addItemToOrder(item);
+    }
 }

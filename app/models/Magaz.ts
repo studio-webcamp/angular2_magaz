@@ -11,11 +11,15 @@ class Magaz {
     constructor(){
         this.http = new Fetch();
     }
-    getOrders() {
+    getOrders():Order[] {
         return this.orders;
     };
 
-    addItemToOrder(item:Tshirt) {
+    getCurrentOrder():Order {
+        return this.orders[0];
+    };
+
+    addItemToOrder(item:Tshirt):void {
         if (!this.orders.length) {
             this.addOrder(new Order());
         }

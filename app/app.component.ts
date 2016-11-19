@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
 @Component({
     moduleId: module.id,
     selector: 'my-app',
-    template: '<h1>Tshirts</h1><tshirt-list></tshirt-list>'
+    templateUrl: 'app.component.html'
 })
 export class AppComponent { }

@@ -12,11 +12,19 @@ var core_1 = require("@angular/core");
 var Tshirt_1 = require("../models/Tshirt");
 var TshirtComponent = (function () {
     function TshirtComponent() {
+        this.onOrdered = new core_1.EventEmitter();
     }
+    TshirtComponent.prototype.order = function () {
+        this.onOrdered.emit(this.tshirt);
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Tshirt_1.default)
     ], TshirtComponent.prototype, "tshirt", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], TshirtComponent.prototype, "onOrdered", void 0);
     TshirtComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

@@ -14,7 +14,6 @@ class Order {
     addItem(item:Tshirt) {
         this.items.push(item);
         this.setTotalPrice(item.price);
-        console.log("hello");
     };
 
     removeItem(item:Tshirt) {

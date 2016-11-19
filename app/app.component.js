@@ -19,7 +19,7 @@ var AppComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            template: '<h1>Tshirts</h1><tshirt-list></tshirt-list>'
+            templateUrl: 'app.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
