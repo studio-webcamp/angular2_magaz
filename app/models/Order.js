@@ -11,6 +11,7 @@ var Order = (function () {
     Order.prototype.addItem = function (item) {
         this.items.push(item);
         this.setTotalPrice(item.price);
+        console.log("hello");
     };
     ;
     Order.prototype.removeItem = function (item) {

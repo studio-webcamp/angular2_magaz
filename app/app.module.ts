@@ -4,39 +4,39 @@
 import {NgModule}      from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent}   from './app.component';
-import {OrderComponent} from "./order.component";
-import {RouterModule} from "@angular/router";
-import {DashboardComponent} from "./dashboard.component";
 import {TshirtListComponent} from "./components/tshirtList.component";
 import Magaz from "./models/Magaz";
-import {MaterialModule} from "@angular/material";
 import {TshirtComponent} from "./components/tshirt.component";
+import {MaterialModule} from "@angular/material";
+import {RouterModule} from "@angular/router";
+import {OrderComponent} from "./components/order.component";
+import {AlltshirtsComponent} from "./components/alltishirts.component";
 
-
+//noinspection TypeScriptValidateTypes
 @NgModule({
-    imports: [BrowserModule,
+    imports: [
+        BrowserModule,
         MaterialModule.forRoot(),
         RouterModule.forRoot([
             {
-                path: 'order',
-                component: OrderComponent
+                path: 'tshirts',
+                component: AlltshirtsComponent
             },
             {
-                path: 'dashboard',
-                component: DashboardComponent
+                path: 'order',
+                component: OrderComponent
             }
         ])
     ],
     declarations: [
         AppComponent,
-        TshirtComponent,
         TshirtListComponent,
-        OrderComponent,
-        DashboardComponent
+        TshirtComponent,
+        AlltshirtsComponent,
+        OrderComponent
     ],
     bootstrap: [AppComponent],
-    providers:[Magaz]
+    providers: [Magaz]
 })
-
 export class AppModule {
 }

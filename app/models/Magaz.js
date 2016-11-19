@@ -28,8 +28,8 @@ var Magaz = (function () {
         return this.http.get('/data/tshirts.json').then(function successCallback(response) {
             return response.json();
         }).then(function (json) {
-            return json.map(function (el) {
-                return new Tshirt_1.default(el.sku, el.brand, el.size, el.color, el.price);
+            return json.map(function (t) {
+                return new Tshirt_1.default(t.sku, t.brand, Tshirt_1.default.Size[t.size], t.color, t.price);
             });
         });
     };

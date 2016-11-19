@@ -1,7 +1,6 @@
 import Order from "./Order";
 import Tshirt from "./Tshirt";
 import Fetch from "./Fetch";
-import {el} from "@angular/platform-browser/testing/browser_util";
 class Magaz {
 
     private orders:Array<Order> = [];
@@ -31,8 +30,8 @@ class Magaz {
         return this.http.get('/data/tshirts.json').then(function successCallback(response:Response) {
             return response.json();
         }).then((json)=>{
-            return json.map((el:any)=> {
-                return new Tshirt(el.sku, el.brand, <any>el.size, el.color, el.price);
+            return json.map((t:any) => {
+                return new Tshirt(t.sku, t.brand, <any>Tshirt.Size[t.size], t.color, t.price);
             });
         });
 

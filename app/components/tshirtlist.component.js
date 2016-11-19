@@ -24,6 +24,9 @@ var TshirtListComponent = (function () {
             return tshirts;
         });
     };
+    TshirtListComponent.prototype.addItemToOrder = function (item) {
+        return this.magaz.addItemToOrder(item);
+    };
     TshirtListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

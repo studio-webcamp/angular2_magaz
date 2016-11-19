@@ -8,6 +8,7 @@ import Tshirt from "../models/Tshirt";
     styleUrls:['tshirtList.component.css']
 })
 export class TshirtListComponent implements OnInit {
+
     private tshirtList:Tshirt[];
 
     ngOnInit():void {
@@ -22,5 +23,8 @@ export class TshirtListComponent implements OnInit {
             this.tshirtList = tshirts;
             return tshirts;
         });
+    }
+    addItemToOrder(item:Tshirt) {
+        return this.magaz.addItemToOrder(item);
     }
 }

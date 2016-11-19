@@ -8,17 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by lenka on 10/29/16.
- */
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var OrderComponent = (function () {
     function OrderComponent() {
     }
     OrderComponent = __decorate([
         core_1.Component({
-            selector: 'order-app',
-            template: '<h3>My Order</h3>'
+            moduleId: module.id,
+            selector: 'order',
+            templateUrl: 'order.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], OrderComponent);

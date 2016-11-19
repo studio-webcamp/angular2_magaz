@@ -14,37 +14,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var order_component_1 = require("./order.component");
-var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
 var tshirtList_component_1 = require("./components/tshirtList.component");
 var Magaz_1 = require("./models/Magaz");
-var material_1 = require("@angular/material");
 var tshirt_component_1 = require("./components/tshirt.component");
+var material_1 = require("@angular/material");
+var router_1 = require("@angular/router");
+var order_component_1 = require("./components/order.component");
+var alltishirts_component_1 = require("./components/alltishirts.component");
+//noinspection TypeScriptValidateTypes
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
+            imports: [
+                platform_browser_1.BrowserModule,
                 material_1.MaterialModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     {
-                        path: 'order',
-                        component: order_component_1.OrderComponent
+                        path: 'tshirts',
+                        component: alltishirts_component_1.AlltshirtsComponent
                     },
                     {
-                        path: 'dashboard',
-                        component: dashboard_component_1.DashboardComponent
+                        path: 'order',
+                        component: order_component_1.OrderComponent
                     }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
-                tshirt_component_1.TshirtComponent,
                 tshirtList_component_1.TshirtListComponent,
-                order_component_1.OrderComponent,
-                dashboard_component_1.DashboardComponent
+                tshirt_component_1.TshirtComponent,
+                alltishirts_component_1.AlltshirtsComponent,
+                order_component_1.OrderComponent
             ],
             bootstrap: [app_component_1.AppComponent],
             providers: [Magaz_1.default]
