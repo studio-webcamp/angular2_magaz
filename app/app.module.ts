@@ -20,7 +20,7 @@ import {AlltshirtsComponent} from "./components/alltishirts.component";
         RouterModule.forRoot([
             {
                 path: 'tshirts',
-                component: AlltshirtsComponent
+                component: TshirtListComponent
             },
             {
                 path: 'order',

@@ -33,7 +33,7 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     {
                         path: 'tshirts',
-                        component: alltishirts_component_1.AlltshirtsComponent
+                        component: tshirtList_component_1.TshirtListComponent
                     },
                     {
                         path: 'order',
