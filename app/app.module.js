@@ -32,6 +32,11 @@ var AppModule = (function () {
                 material_1.MaterialModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     {
+                        path: '',
+                        redirectTo: '/tshirts',
+                        pathMatch: 'full'
+                    },
+                    {
                         path: 'tshirts',
                         component: tshirtList_component_1.TshirtListComponent
                     },

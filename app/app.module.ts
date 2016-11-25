@@ -19,6 +19,11 @@ import {AlltshirtsComponent} from "./components/alltishirts.component";
         MaterialModule.forRoot(),
         RouterModule.forRoot([
             {
+                path: '',
+                redirectTo: '/tshirts',
+                pathMatch: 'full'
+            },
+            {
                 path: 'tshirts',
                 component: TshirtListComponent
             },
